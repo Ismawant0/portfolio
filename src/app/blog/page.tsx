@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 function BlogLink({ title, date, excerpt, slug }: { title: string; date: string; excerpt: string; slug: string }) {
   return (
-    <div className="mb-10">
+    <li className="mb-10 list-none">
       <Link
         href={`/blog/${slug}`}
         className="group block"
@@ -24,7 +24,7 @@ function BlogLink({ title, date, excerpt, slug }: { title: string; date: string;
           {excerpt}
         </div>
       </Link>
-    </div>
+    </li>
   );
 }
 
@@ -44,7 +44,7 @@ export default function Blog() {
       {/* Blog List Section */}
       <section>
         <h1 className="text-3xl font-bold text-zinc-100 mb-10 tracking-tight">Blog</h1>
-        <div className="flex flex-col">
+        <ul className="flex flex-col p-0 m-0">
           {blogPosts.map((post) => (
             <BlogLink
               key={post.slug}
@@ -54,7 +54,7 @@ export default function Blog() {
               slug={post.slug}
             />
           ))}
-        </div>
+        </ul>
       </section>
 
       {/* Footer */}

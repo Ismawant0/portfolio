@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 function ProjectLink({ title, description, href, category }: { title: string; description: string; href: string; category: string }) {
   return (
-    <div className="mb-10">
+    <li className="mb-10 list-none">
       <a
         href={href}
         target="_blank"
@@ -29,7 +29,7 @@ function ProjectLink({ title, description, href, category }: { title: string; de
           {description}
         </div>
       </a>
-    </div>
+    </li>
   );
 }
 
@@ -49,7 +49,7 @@ export default function Projects() {
       {/* Projects List */}
       <section>
         <h1 className="text-3xl font-bold text-zinc-100 mb-10 tracking-tight">Projects</h1>
-        <div className="flex flex-col">
+        <ul className="flex flex-col p-0 m-0">
           {projects.map((project) => (
             <ProjectLink
               key={project.id}
@@ -59,7 +59,7 @@ export default function Projects() {
               category={project.category}
             />
           ))}
-        </div>
+        </ul>
       </section>
 
       {/* Footer */}

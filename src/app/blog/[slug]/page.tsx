@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Script from "next/script";
 import { notFound } from "next/navigation";
 import { blogPosts } from "@/data/blog";
 
@@ -54,6 +55,28 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
   return (
     <main className="flex flex-col gap-12">
+      <Script
+        id="blog-post-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BlogPosting',
+            headline: post.title,
+            description: post.excerpt,
+            datePublished: post.date,
+            author: {
+              '@type': 'Person',
+              name: 'Ismawanto',
+              url: 'https://ismawanto.vercel.app',
+            },
+            mainEntityOfPage: {
+              '@type': 'WebPage',
+              '@id': `https://ismawanto.vercel.app/blog/${post.slug}`,
+            },
+          }),
+        }}
+      />
       {/* Back Button */}
       <nav>
         <Link 
