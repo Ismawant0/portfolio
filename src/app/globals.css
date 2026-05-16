@@ -15,6 +15,8 @@
 body {
   background-color: var(--background);
   color: var(--foreground);
+  font-size: 15px; /* Standardize base font size */
+  line-height: 1.7; /* Standardize line height */
 }
 
 @layer base {
@@ -26,4 +28,10 @@ body {
 ::selection {
   background-color: #27272a; /* zinc-800 */
   color: #f4f4f5; /* zinc-100 */
+}
+
+/* Ensure prose matches our global standards */
+.prose {
+  font-size: 15px !important;
+  line-height: 1.7 !important;
 }

@@ -13,7 +13,7 @@ function ProjectLink({ title, description, href }: { title: string; description:
         <div className="text-zinc-100 font-medium border-b border-transparent group-hover:border-zinc-700 transition-all w-fit mb-1">
           {title}
         </div>
-        <div className="text-zinc-500 text-sm font-light leading-relaxed">
+        <div className="text-zinc-500 font-light leading-relaxed">
           {description}
         </div>
       </a>

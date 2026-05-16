@@ -88,7 +88,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             }
 
             return (
-              <p key={index} className="text-zinc-400 text-lg leading-[1.8] font-light">
+              <p key={index} className="text-zinc-400 leading-relaxed font-light">
                 {parseMarkdown(trimmed)}
               </p>
             );

@@ -14,7 +14,7 @@ function BlogLink({ title, date, excerpt, slug }: { title: string; date: string;
         <div className="text-zinc-500 text-xs font-mono mb-2">
           {date}
         </div>
-        <div className="text-zinc-400 text-sm font-light leading-relaxed">
+        <div className="text-zinc-400 font-light leading-relaxed">
           {excerpt}
         </div>
       </Link>
