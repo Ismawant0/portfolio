@@ -24,45 +24,71 @@ export default function Home() {
         <h1 className="text-3xl md:text-4xl font-bold text-zinc-100 mb-8 tracking-tight">Hi, I'm Ismawanto.</h1>
         <div className="prose prose-zinc prose-invert max-w-none">
           <p className="text-zinc-300 leading-relaxed font-light mb-4">
-            I’m a Front-End Developer building modern, fast, and production-ready web applications. 
-            I focus on clean architecture, performance optimization, and intuitive user experiences 
-            using React, Next.js, and Tailwind CSS.
+            I’m a Front-End Developer focused on building modern, fast, and production-ready web applications. 
+            I specialize in creating clean, scalable, and intuitive user experiences with a strong emphasis on 
+            performance, maintainable architecture, and thoughtful design using React, Next.js, and Tailwind CSS.
           </p>
           <p className="text-zinc-400 leading-relaxed font-light mb-8">
-            I enjoy turning complex ideas into practical digital products and continuously exploring 
-            better ways to build software — including modern AI-assisted workflows that improve 
-            development speed and efficiency without sacrificing quality.
+            I enjoy transforming complex ideas into practical digital products and continuously exploring 
+            better ways to build software — including modern AI-assisted workflows that enhance 
+            development speed, efficiency, and product quality without compromising engineering standards.
           </p>
-          <Link 
-            href="/projects" 
-            className="text-zinc-100 font-medium border-b border-zinc-800 hover:border-zinc-100 transition-all pb-0.5"
-          >
-            View Projects
-          </Link>
-        </div>
-      </section>
-
-      {/* Connect Section */}
-      <section id="contact" className="flex flex-col gap-4">
-        <p className="text-zinc-400 font-light">
-          You can explore my code or connect with me online.
-        </p>
-        <div className="flex flex-wrap gap-x-6 gap-y-3">
-          <Link href="/blog" aria-label="Read Ismawanto's blog articles" className="text-zinc-100 border-b border-zinc-800 hover:border-zinc-100 transition-all pb-0.5 text-[15px]">
-            Blog
-          </Link>
-          <a href="https://github.com/Ismawant0" target="_blank" rel="noopener noreferrer" aria-label="Visit Ismawanto's GitHub profile" className="text-zinc-100 border-b border-zinc-800 hover:border-zinc-100 transition-all pb-0.5 text-[15px]">
-            GitHub
-          </a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="Connect with Ismawanto on LinkedIn" className="text-zinc-100 border-b border-zinc-800 hover:border-zinc-100 transition-all pb-0.5 text-[15px]">
-            LinkedIn
-          </a>
-          <a href="mailto:wantoisma@gmail.com" aria-label="Send an email to Ismawanto" className="text-zinc-100 border-b border-zinc-800 hover:border-zinc-100 transition-all pb-0.5 text-[15px]">
-            Email
-          </a>
-          <a href="https://wa.me/6285399912255" target="_blank" rel="noopener noreferrer" aria-label="Chat with Ismawanto on WhatsApp" className="text-zinc-100 border-b border-zinc-800 hover:border-zinc-100 transition-all pb-0.5 text-[15px]">
-            WhatsApp
-          </a>
+          
+          <div className="flex flex-col gap-6">
+            <p className="text-zinc-500 text-sm font-light">
+              Explore my work and connect with me:
+            </p>
+            <div className="flex flex-wrap gap-x-6 gap-y-3">
+              <Link 
+                href="/projects" 
+                aria-label="View Ismawanto's projects"
+                className="text-zinc-100 font-medium border-b border-zinc-800 hover:border-zinc-100 transition-all pb-0.5 text-[15px]"
+              >
+                View Projects
+              </Link>
+              <Link 
+                href="/blog" 
+                aria-label="Read Ismawanto's blog articles"
+                className="text-zinc-100 border-b border-zinc-800 hover:border-zinc-100 transition-all pb-0.5 text-[15px]"
+              >
+                Blog
+              </Link>
+              <a 
+                href="https://github.com/Ismawant0" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                aria-label="Visit Ismawanto's GitHub profile"
+                className="text-zinc-100 border-b border-zinc-800 hover:border-zinc-100 transition-all pb-0.5 text-[15px]"
+              >
+                GitHub
+              </a>
+              <a 
+                href="https://linkedin.com/in/ismawanto" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                aria-label="Connect with Ismawanto on LinkedIn"
+                className="text-zinc-100 border-b border-zinc-800 hover:border-zinc-100 transition-all pb-0.5 text-[15px]"
+              >
+                LinkedIn
+              </a>
+              <a 
+                href="mailto:wantoisma@gmail.com" 
+                aria-label="Send an email to Ismawanto"
+                className="text-zinc-100 border-b border-zinc-800 hover:border-zinc-100 transition-all pb-0.5 text-[15px]"
+              >
+                Email
+              </a>
+              <a 
+                href="https://wa.me/6285399912255" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                aria-label="Chat with Ismawanto on WhatsApp"
+                className="text-zinc-100 border-b border-zinc-800 hover:border-zinc-100 transition-all pb-0.5 text-[15px]"
+              >
+                WhatsApp
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 
