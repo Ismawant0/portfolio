@@ -96,4 +96,15 @@ export const projects: Project[] = [
     githubUrl: "#",
     icon: "https://www.google.com/s2/favicons?domain=blonjoodb-104e5.web.app&sz=128",
   },
+  {
+    id: "1home",
+    title: "1Home",
+    role: "Full-Stack Developer",
+    description: "A collaborative family financial management platform designed to streamline tracking and synchronize household expenses among family members in real-time.",
+    problemSolved: "Simplified household budgeting by centralizing financial data and enabling real-time collaboration, ensuring complete financial transparency within the family.",
+    techStack: ["React", "Firebase", "Tailwind CSS"],
+    liveUrl: "https://home-29ebb.web.app/",
+    githubUrl: "#",
+    icon: "https://www.google.com/s2/favicons?domain=home-29ebb.web.app&sz=128",
+  },
 ];
