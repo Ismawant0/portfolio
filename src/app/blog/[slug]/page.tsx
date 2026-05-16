@@ -8,6 +8,17 @@ export async function generateStaticParams() {
   }));
 }
 
+// Simple function to parse bold text **like this**
+function parseMarkdown(text: string) {
+  const parts = text.split(/(\*\*.*?\*\*)/g);
+  return parts.map((part, i) => {
+    if (part.startsWith('**') && part.endsWith('**')) {
+      return <strong key={i} className="text-zinc-100 font-semibold">{part.slice(2, -2)}</strong>;
+    }
+    return part;
+  });
+}
+
 export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const post = blogPosts.find((p) => p.slug === slug);
@@ -29,46 +40,65 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       </nav>
 
       {/* Article Section */}
-      <article>
-        <header className="mb-12">
-          <h1 className="text-3xl md:text-4xl font-bold text-zinc-100 mb-4 leading-tight">
+      <article className="max-w-none">
+        <header className="mb-16">
+          <h1 className="text-3xl md:text-5xl font-bold text-zinc-100 mb-4 leading-tight tracking-tight">
             {post.title}
           </h1>
-          <div className="text-zinc-500 text-sm font-mono">
+          <div className="text-zinc-500 text-sm font-mono uppercase tracking-widest">
             {post.date}
           </div>
         </header>
 
-        <div className="prose prose-zinc prose-invert max-w-none">
-          {/* Simple rendering logic for paragraphs and headings */}
+        <div className="flex flex-col gap-8">
           {post.content.split('\n\n').map((block, index) => {
-            if (block.startsWith('# ')) {
-              return <h1 key={index} className="text-2xl font-bold text-zinc-100 mt-8 mb-4">{block.replace('# ', '')}</h1>;
+            const trimmed = block.trim();
+            if (!trimmed) return null;
+
+            if (trimmed.startsWith('### ')) {
+              return (
+                <h3 key={index} className="text-xl md:text-2xl font-bold text-zinc-100 mt-12 mb-2 tracking-tight">
+                  {trimmed.replace('### ', '')}
+                </h3>
+              );
             }
-            if (block.startsWith('## ')) {
-              return <h2 key={index} className="text-xl font-bold text-zinc-100 mt-8 mb-4">{block.replace('## ', '')}</h2>;
+            
+            if (trimmed.startsWith('---')) {
+              return <hr key={index} className="border-zinc-800 my-8" />;
             }
-            if (block.startsWith('### ')) {
-              return <h3 key={index} className="text-lg font-bold text-zinc-100 mt-6 mb-3">{block.replace('### ', '')}</h3>;
+
+            if (trimmed.startsWith('**References**')) {
+              return (
+                <h4 key={index} className="text-lg font-bold text-zinc-100 mt-8 mb-4">
+                  References
+                </h4>
+              );
             }
-            if (block.includes('- ')) {
-               const items = block.split('\n').filter(line => line.trim().startsWith('- '));
-               if (items.length > 0) {
-                 return (
-                   <ul key={index} className="list-disc list-inside space-y-2 text-zinc-400 font-light mb-4">
-                     {items.map((item, i) => <li key={i}>{item.replace('- ', '')}</li>)}
-                   </ul>
-                 );
-               }
+
+            // Handle ordered list for references
+            if (/^\d+\./.test(trimmed)) {
+               return (
+                 <div key={index} className="flex flex-col gap-2">
+                   {trimmed.split('\n').map((line, i) => (
+                     <p key={i} className="text-zinc-500 text-xs font-light leading-relaxed">
+                       {line}
+                     </p>
+                   ))}
+                 </div>
+               );
             }
-            return <p key={index} className="text-zinc-400 leading-relaxed font-light mb-6 whitespace-pre-wrap">{block.trim()}</p>;
+
+            return (
+              <p key={index} className="text-zinc-400 text-lg leading-[1.8] font-light">
+                {parseMarkdown(trimmed)}
+              </p>
+            );
           })}
         </div>
       </article>
 
-      {/* Footer */}
-      <footer className="mt-12 text-xs text-zinc-600 font-light">
-      </footer>
+      {/* Footer Spacer */}
+      <div className="h-24" />
     </main>
   );
 }
