@@ -90,6 +90,9 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
+  verification: {
+    google: "6d69baa6955c57b3",
+  },
   icons: {
     icon: "/favicon.svg",
     apple: "/favicon.svg",
