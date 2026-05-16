@@ -67,7 +67,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               return <hr key={index} className="border-zinc-800 my-8" />;
             }
 
-            if (trimmed.startsWith('**References**')) {
+            if (trimmed === 'References' || trimmed === '**References**') {
               return (
                 <h4 key={index} className="text-lg font-bold text-zinc-100 mt-8 mb-4">
                   References
@@ -75,17 +75,16 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               );
             }
 
-            // Handle ordered list for references
-            if (/^\d+\./.test(trimmed)) {
-               return (
-                 <div key={index} className="flex flex-col gap-2">
-                   {trimmed.split('\n').map((line, i) => (
-                     <p key={i} className="text-zinc-500 text-xs font-light leading-relaxed">
-                       {line}
-                     </p>
-                   ))}
-                 </div>
-               );
+            // Detect if this block is a reference (starts with an author/year pattern)
+            // or if it's in the references section (after the HR)
+            const isReferenceSection = index > post.content.split('\n\n').findIndex(b => b.trim().startsWith('---'));
+            
+            if (isReferenceSection && trimmed !== 'References' && trimmed !== '**References**') {
+              return (
+                <p key={index} className="text-zinc-500 text-xs font-light leading-relaxed">
+                  {trimmed}
+                </p>
+              );
             }
 
             return (

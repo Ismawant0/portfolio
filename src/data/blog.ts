@@ -104,13 +104,20 @@ The most meaningful work of the future will come neither from humans alone nor f
 ---
 
 **References**
-1. Farach, A. et al. (2026). Scaffolding Human-AI Collaboration: A Field Experiment on Behavioral Protocols and Cognitive Reframing. arXiv:2604.08678. 
-2. Luan, Y. L., Kim, Y. J., & Zhou, J. (2025). Augmented Learning for Joint Creativity in Human-GenAI Co-Creation. Information Systems Research. 
-3. Kovanovic, V. & Marrone, R. (2025). Does Using Artificial Intelligence Ruin Your Actual Intelligence? Scientists Investigated. The Conversation. 
-4. Spizzirri, A. (2026). The Specification Trap: Why Static Value Alignment Alone Is Insufficient for Robust Alignment. arXiv:2512.03048. 
-5. N. et al. (2025). GPT as a Monte Carlo Language Tree: A Probabilistic Perspective. arXiv:2501.07641. 
-6. S, P. et al. (2026). Artificial Intelligence as a Cognitive Partner: A Developmental Framework for Human–AI Co-regulation in Learning. Frontiers in Developmental Psychology. 
-7. (2025). Simply Incorporating Generative AI into Groups Is Not Enough: Exploring the Effects of Human-AI Collaboration in Groups on Brainstorming. J-Stage. 
+
+Farach, A. et al. (2026). Scaffolding Human-AI Collaboration: A Field Experiment on Behavioral Protocols and Cognitive Reframing. arXiv:2604.08678. 
+
+Luan, Y. L., Kim, Y. J., & Zhou, J. (2025). Augmented Learning for Joint Creativity in Human-GenAI Co-Creation. Information Systems Research. 
+
+Kovanovic, V. & Marrone, R. (2025). Does Using Artificial Intelligence Ruin Your Actual Intelligence? Scientists Investigated. The Conversation. 
+
+Spizzirri, A. (2026). The Specification Trap: Why Static Value Alignment Alone Is Insufficient for Robust Alignment. arXiv:2512.03048. 
+
+N. et al. (2025). GPT as a Monte Carlo Language Tree: A Probabilistic Perspective. arXiv:2501.07641. 
+
+S, P. et al. (2026). Artificial Intelligence as a Cognitive Partner: A Developmental Framework for Human–AI Co-regulation in Learning. Frontiers in Developmental Psychology. 
+
+(2025). Simply Incorporating Generative AI into Groups Is Not Enough: Exploring the Effects of Human-AI Collaboration in Groups on Brainstorming. J-Stage. 
     `,
   },
 ];
