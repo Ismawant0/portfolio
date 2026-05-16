@@ -1,17 +1,22 @@
 import Link from "next/link";
 import { projects } from "@/data/projects";
 
-function ProjectLink({ title, description, href }: { title: string; description: string; href: string }) {
+function ProjectLink({ title, description, href, category }: { title: string; description: string; href: string; category: string }) {
   return (
-    <div className="mb-8">
+    <div className="mb-10">
       <a
         href={href}
         target="_blank"
         rel="noopener noreferrer"
         className="group block"
       >
-        <div className="text-zinc-100 font-medium border-b border-transparent group-hover:border-zinc-700 transition-all w-fit mb-1">
-          {title}
+        <div className="flex items-center gap-3 mb-1">
+          <div className="text-zinc-100 font-medium border-b border-transparent group-hover:border-zinc-700 transition-all w-fit">
+            {title}
+          </div>
+          <span className="text-[10px] font-mono px-1.5 py-0.5 rounded border border-zinc-800 text-zinc-500 tracking-wider">
+            {category}
+          </span>
         </div>
         <div className="text-zinc-500 font-light leading-relaxed">
           {description}
@@ -44,6 +49,7 @@ export default function Projects() {
               title={project.title}
               description={project.description}
               href={project.liveUrl || "#"}
+              category={project.category}
             />
           ))}
         </div>
