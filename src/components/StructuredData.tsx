@@ -22,8 +22,7 @@ export default function StructuredData() {
       'Performance Optimization'
     ],
     sameAs: [
-      'https://github.com/Ismawant0',
-      'https://linkedin.com/in/ismawanto' // Placeholder if not provided, user can update
+      'https://github.com/Ismawant0'
     ]
   };
 

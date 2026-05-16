@@ -63,15 +63,6 @@ export default function Home() {
                 GitHub
               </a>
               <a 
-                href="https://linkedin.com/in/ismawanto" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                aria-label="Connect with Ismawanto on LinkedIn"
-                className="text-zinc-100 border-b border-zinc-800 hover:border-zinc-100 transition-all pb-0.5 text-[15px]"
-              >
-                LinkedIn
-              </a>
-              <a 
                 href="mailto:wantoisma@gmail.com" 
                 aria-label="Send an email to Ismawanto"
                 className="text-zinc-100 border-b border-zinc-800 hover:border-zinc-100 transition-all pb-0.5 text-[15px]"
