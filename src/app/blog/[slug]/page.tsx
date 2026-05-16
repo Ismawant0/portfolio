@@ -75,9 +75,10 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               );
             }
 
-            // Detect if this block is a reference (starts with an author/year pattern)
-            // or if it's in the references section (after the HR)
-            const isReferenceSection = index > post.content.split('\n\n').findIndex(b => b.trim().startsWith('---'));
+            // Detect if this block is a reference (after the HR)
+            const blocks = post.content.split('\n\n');
+            const hrIndex = blocks.findIndex(b => b.trim().startsWith('---'));
+            const isReferenceSection = hrIndex !== -1 && index > hrIndex;
             
             if (isReferenceSection && trimmed !== 'References' && trimmed !== '**References**') {
               return (
