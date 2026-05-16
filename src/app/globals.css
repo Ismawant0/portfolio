@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+:root {
+  --background: #09090b; /* zinc-950 */
+  --foreground: #d4d4d8; /* zinc-300 */
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, monospace;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+@layer base {
+  h1, h2, h3 {
+    @apply text-zinc-100 font-medium tracking-tight;
+  }
+}
+
+::selection {
+  background-color: #27272a; /* zinc-800 */
+  color: #f4f4f5; /* zinc-100 */
+}
