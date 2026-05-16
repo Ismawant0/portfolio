@@ -1,5 +1,11 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { blogPosts } from "@/data/blog";
+
+export const metadata: Metadata = {
+  title: "Blog",
+  description: "Technical articles and insights on React, Next.js, AI, and modern software development by Ismawanto.",
+};
 
 function BlogLink({ title, date, excerpt, slug }: { title: string; date: string; excerpt: string; slug: string }) {
   return (

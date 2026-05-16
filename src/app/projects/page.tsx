@@ -1,5 +1,11 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { projects } from "@/data/projects";
+
+export const metadata: Metadata = {
+  title: "Projects",
+  description: "Explore the portfolio of projects built by Ismawanto, featuring e-commerce platforms, PWAs, and organizational websites.",
+};
 
 function ProjectLink({ title, description, href, category }: { title: string; description: string; href: string; category: string }) {
   return (
@@ -8,6 +14,7 @@ function ProjectLink({ title, description, href, category }: { title: string; de
         href={href}
         target="_blank"
         rel="noopener noreferrer"
+        aria-label={`View live project: ${title} (${category})`}
         className="group block"
       >
         <div className="flex items-center gap-3 mb-1">

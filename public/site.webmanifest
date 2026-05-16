@@ -1,0 +1,16 @@
+{
+  "name": "Ismawanto Portfolio",
+  "short_name": "Ismawanto",
+  "description": "Professional portfolio of Ismawanto, a Front-End Developer.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#09090b",
+  "theme_color": "#09090b",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
