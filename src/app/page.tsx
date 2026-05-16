@@ -28,14 +28,14 @@ export default function Home() {
             I specialize in creating clean, scalable, and intuitive user experiences with a strong emphasis on 
             performance, maintainable architecture, and thoughtful design using React, Next.js, and Tailwind CSS.
           </p>
-          <p className="text-zinc-400 leading-relaxed font-light mb-8">
+          <p className="text-zinc-300 leading-relaxed font-light mb-8">
             I enjoy transforming complex ideas into practical digital products and continuously exploring 
             better ways to build software — including modern AI-assisted workflows that enhance 
             development speed, efficiency, and product quality without compromising engineering standards.
           </p>
           
           <div className="flex flex-col gap-6">
-            <p className="text-zinc-500 text-sm font-light">
+            <p className="text-zinc-300 font-light">
               Explore my work and connect with me:
             </p>
             <div className="flex flex-wrap gap-x-6 gap-y-3">
