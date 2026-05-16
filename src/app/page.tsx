@@ -5,7 +5,7 @@ export default function Home() {
     <main className="flex flex-col gap-12">
       {/* Intro Section */}
       <section>
-        <h1 className="text-2xl font-bold text-zinc-100 mb-6">Hi, I'm Ismawanto.</h1>
+        <h1 className="text-3xl md:text-4xl font-bold text-zinc-100 mb-8 tracking-tight">Hi, I'm Ismawanto.</h1>
         <div className="prose prose-zinc prose-invert max-w-none">
           <p className="text-zinc-300 leading-relaxed font-light mb-4">
             I’m a Front-End Developer building modern, fast, and production-ready web applications. 

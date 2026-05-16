@@ -15,13 +15,20 @@
 body {
   background-color: var(--background);
   color: var(--foreground);
-  font-size: 15px; /* Standardize base font size */
-  line-height: 1.7; /* Standardize line height */
+  font-size: 16.5px; /* Slightly larger, more comfortable base size */
+  line-height: 1.75; /* Increased for better readability */
+  letter-spacing: -0.011em; /* Subtle modern tracking */
 }
 
 @layer base {
-  h1, h2, h3 {
-    @apply text-zinc-100 font-medium tracking-tight;
+  h1 {
+    @apply text-3xl font-bold text-zinc-100 tracking-tight;
+  }
+  h2 {
+    @apply text-xl font-medium text-zinc-100 tracking-tight;
+  }
+  h3 {
+    @apply text-lg font-medium text-zinc-100 tracking-tight;
   }
 }
 
@@ -32,6 +39,6 @@ body {
 
 /* Ensure prose matches our global standards */
 .prose {
-  font-size: 15px !important;
-  line-height: 1.7 !important;
+  font-size: 16.5px !important;
+  line-height: 1.75 !important;
 }

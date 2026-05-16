@@ -36,7 +36,7 @@ export default function Projects() {
 
       {/* Projects List */}
       <section>
-        <h1 className="text-2xl font-bold text-zinc-100 mb-8">Projects</h1>
+        <h1 className="text-3xl font-bold text-zinc-100 mb-10 tracking-tight">Projects</h1>
         <div className="flex flex-col">
           {projects.map((project) => (
             <ProjectLink

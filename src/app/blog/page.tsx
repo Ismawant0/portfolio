@@ -37,7 +37,7 @@ export default function Blog() {
 
       {/* Blog List Section */}
       <section>
-        <h1 className="text-2xl font-bold text-zinc-100 mb-10">Blog</h1>
+        <h1 className="text-3xl font-bold text-zinc-100 mb-10 tracking-tight">Blog</h1>
         <div className="flex flex-col">
           {blogPosts.map((post) => (
             <BlogLink
