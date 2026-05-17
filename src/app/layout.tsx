@@ -22,7 +22,7 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
-const defaultTitle = "Ismawanto — Front-End Developer | React, Next.js & Modern Web Apps";
+const defaultTitle = "Ismawanto — Indonesia Front-End Developer | React & Next.js";
 const defaultDescription = "Ismawanto is a Front-End Developer specializing in React, Next.js, Tailwind CSS, frontend architecture, performance optimization, and production-ready web applications.";
 const siteUrl = "https://ismawanto.vercel.app";
 
@@ -33,6 +33,11 @@ export const metadata: Metadata = {
     template: "%s | Ismawanto",
   },
   description: defaultDescription,
+  applicationName: "Ismawanto",
+  appleWebApp: {
+    title: "Ismawanto",
+    statusBarStyle: "default",
+  },
   keywords: [
     "Ismawanto",
     "Front-End Developer",
@@ -44,6 +49,32 @@ export const metadata: Metadata = {
     "Frontend Architecture",
     "Web Performance",
     "Ismawanto Developer",
+    "Web Developer Profesional Bojonegoro",
+    "Full Stack Developer Bojonegoro",
+    "Jasa Pembuatan Website Custom Bojonegoro",
+    "Konsultan IT dan Web Development Bojonegoro",
+    "Cara membuat toko online otomatis Bojonegoro",
+    "Redesign website perusahaan Bojonegoro",
+    "Jasa SEO Website Bojonegoro",
+    "Jasa pembuatan web dengan React dan Tailwind Bojonegoro",
+    "Developer Web App PWA (Progressive Web App) Bojonegoro",
+    "Pembuatan sistem informasi berbasis Laravel Bojonegoro",
+    "Jasa integrasi API sistem pembayaran Bojonegoro",
+    "Bojonegoro",
+    "Kota Minyak",
+    "Indonesia",
+    "Jawa Timur",
+    "Web Developer Profesional Jawa Timur",
+    "Full Stack Developer Jawa Timur",
+    "Jasa Pembuatan Website Custom Jawa Timur",
+    "Konsultan IT dan Web Development Jawa Timur",
+    "Cara membuat toko online otomatis Jawa Timur",
+    "Redesign website perusahaan Jawa Timur",
+    "Jasa SEO Website Jawa Timur",
+    "Jasa pembuatan web dengan React dan Tailwind Jawa Timur",
+    "Developer Web App PWA (Progressive Web App) Jawa Timur",
+    "Pembuatan sistem informasi berbasis Laravel Jawa Timur",
+    "Jasa integrasi API sistem pembayaran Jawa Timur",
   ],
   authors: [{ name: "Ismawanto", url: siteUrl }],
   creator: "Ismawanto",
